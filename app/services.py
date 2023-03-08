@@ -134,6 +134,7 @@ def updateTheCity(data,city_id):
     SecondLandmark=data['SecondLandmark']
     ThirdLandMark=data['ThirdLandMark']
     
+    
     mysql=("Update City SET CityId = %s, Name = %s, CountryId = %s, Capital = %s, FirstLandmark = %s, SecondLandmark = %s, ThirdLandMark = %s where CityId = %s")
     values=(CityId,Name,CountryId,Capital,FirstLandmark,SecondLandmark,ThirdLandMark,city_id)
     mycursor.execute(mysql,values) 
