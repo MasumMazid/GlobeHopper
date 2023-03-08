@@ -45,7 +45,7 @@ def updatecountry(country_id):
     return countries.UpdateCountry(data,country_id)
 
 
-## Add new Capital
+## Add new Capital for travel agent
 @app.post('/cities')
 def createcity():
     data= request.json
