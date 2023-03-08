@@ -39,6 +39,10 @@ def getcountriesincontinent(continent):
         })  
     return jsonify(data)
 
+def UpdateCountry(data,country_id):
+    services.updateTheCountry(data,country_id)
+    return jsonify({"message" : "Country has been updated"})
+
   
 
     

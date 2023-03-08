@@ -39,6 +39,11 @@ def deletecountry(country_id):
 
 
 ## Put countries as in update country?
+@app.put('/countries/<int:country_id>')
+def updatecountry(country_id):
+    data= request.json
+    return countries.UpdateCountry(data,country_id)
+
 
 ## Add new Capital
 @app.post('/cities')
@@ -58,7 +63,11 @@ def getallCities():
 def deletecity(city_id):
     return cities.deletecity(city_id)
 
-## Update City?
+##  Put Update City?
+@app.put('/cities/<int:city_id>')
+def updatecity(city_id):
+    data= request.json
+    return cities.UpdateCity(data,city_id)
 
 if __name__=='__main__':
     app.run(debug=True)

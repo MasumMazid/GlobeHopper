@@ -32,7 +32,6 @@ def getCities():
             "FirstLandmark": row[4],
             "SecondLandmark" : row[5],
             "ThirdLandMark" : row[6]
-            
         })  
     return jsonify(data)
 
@@ -43,3 +42,7 @@ def deletecity(city_id):
 def createCity(data):
    services.createCities(data)
    return jsonify({"message" : "Data inserted successfully"})
+
+def UpdateCity(data,city_id):
+    services.updateTheCity(data,city_id)
+    return jsonify({"message" : "City has been updated"})

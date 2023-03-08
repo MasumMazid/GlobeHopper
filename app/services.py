@@ -107,3 +107,35 @@ def createCities(data):
     
     mycursor.execute(mysql,values) 
     conn.mydb.close()
+
+def updateTheCountry(data,country_id):
+    conn.mydb._open_connection()
+    mycursor=conn.mydb.cursor()
+
+    countryId=data['CountryID']
+    Name=data['Name']
+    Population=data['Population']
+    continent=data['Continent']
+    
+    mysql=("Update Country SET CountryId = %s,Name=%s, Population=%s, Continent=%s where CountryID= %s")
+    values=(countryId,Name,Population,continent,country_id)
+    mycursor.execute(mysql,values) 
+    conn.mydb.close()
+
+def updateTheCity(data,city_id):
+    conn.mydb._open_connection()
+    mycursor=conn.mydb.cursor()
+
+    CityId=data['CityId']
+    Name=data['Name']
+    CountryId=data['CountryId']
+    Capital=data['Capital']
+    FirstLandmark=data['FirstLandmark']
+    SecondLandmark=data['SecondLandmark']
+    ThirdLandMark=data['ThirdLandMark']
+    
+    mysql=("Update City SET CityId = %s, Name = %s, CountryId = %s, Capital = %s, FirstLandmark = %s, SecondLandmark = %s, ThirdLandMark = %s where CityId = %s")
+    values= values=(CityId,Name,CountryId,Capital,FirstLandmark,SecondLandmark,ThirdLandMark,city_id)
+    mycursor.execute(mysql,values) 
+    conn.mydb.close()
+    
