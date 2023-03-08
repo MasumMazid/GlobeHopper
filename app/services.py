@@ -6,7 +6,7 @@ import conn
 
 
 
-def allCountries():
+def allcountries():
     
     conn.mydb._open_connection()
     mycursor=conn.mydb.cursor()
@@ -16,7 +16,7 @@ def allCountries():
     return results
 
 
-def createCountry(data):
+def createcountry(data):
     
     conn.mydb._open_connection()
     mycursor=conn.mydb.cursor()

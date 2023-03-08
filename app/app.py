@@ -12,15 +12,15 @@ app=Flask(__name__)
 ##Read API
 
 @app.get('/countries')
-def getAllCountries():
-    return countries.getCountries()
+def getallcountries():
+    return countries.getcountries()
   
   
     
 @app.post('/countries')
-def createCountry():
+def createcountry():
     data= request.json
-    return countries.createCountry(data)
+    return countries.createcountry(data)
 
 
 

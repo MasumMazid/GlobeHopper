@@ -4,8 +4,8 @@ from flask import Flask, request, jsonify
 import services
 
 
-def getCountries():
-    results= services.allCountries()
+def getcountries():
+    results= services.allcountries()
     data=[]
     for row in results:
         data.append({
@@ -17,7 +17,7 @@ def getCountries():
         })  
     return jsonify(data)
 
-def createCountry(data):
-   services.createCountry(data)
+def createcountry(data):
+   services.createcountry(data)
    return jsonify({"message" : "Data inserted successfully"})
 
