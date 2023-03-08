@@ -14,15 +14,16 @@ app=Flask(__name__)
 @app.get('/countries')
 def getAllCountries():
     return countries.getCountries()
+  
+  
     
-@app.get('/countries')
-def getAllCities():
-    return 
-
-
+@app.post('/countries')
+def createCountry():
+    data= request.json
+    return countries.createCountry(data)
 
 
 
 
 if __name__=='__main__':
-    app.run()
+    app.run(debug=True)
