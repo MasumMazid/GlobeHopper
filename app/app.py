@@ -16,7 +16,7 @@ def getallcountries():
     return countries.getcountries()
 
 
-##Get capital Information
+##Get capital Information for traveller
 @app.get('/cities/<CityId>')
 def getLandMark(CityId):
     return cities.getLandMark(CityId)
