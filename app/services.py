@@ -135,7 +135,18 @@ def updateTheCity(data,city_id):
     ThirdLandMark=data['ThirdLandMark']
     
     mysql=("Update City SET CityId = %s, Name = %s, CountryId = %s, Capital = %s, FirstLandmark = %s, SecondLandmark = %s, ThirdLandMark = %s where CityId = %s")
-    values= values=(CityId,Name,CountryId,Capital,FirstLandmark,SecondLandmark,ThirdLandMark,city_id)
+    values=(CityId,Name,CountryId,Capital,FirstLandmark,SecondLandmark,ThirdLandMark,city_id)
     mycursor.execute(mysql,values) 
     conn.mydb.close()
+    
+def GetTheCapital(country_id):
+    conn.mydb._open_connection()
+    mycursor=conn.mydb.cursor()
+    values=[country_id]
+    mysql=("Select * from city WHERE  CountryId = %s and Capital=1")
+    
+    mycursor.execute(mysql,(values)) 
+    results= mycursor.fetchall()
+    conn.mydb.close()
+    return results
     

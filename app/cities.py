@@ -11,7 +11,10 @@ def getLandMark(CityId):
     
     for row in results:
         data.append({
-            
+            "CityId": row[0],
+            "Name" : row[1],
+            "CountryId" : row[2],
+            "Capital" : row[3],
             "FirstLandmark": row[4],
             "SecondLandmark" : row[5],
             "ThirdLandMark" : row[6]
@@ -46,3 +49,18 @@ def createCity(data):
 def UpdateCity(data,city_id):
     services.updateTheCity(data,city_id)
     return jsonify({"message" : "City has been updated"})
+
+def getCapital(country_id):
+    results=services.GetTheCapital(country_id)
+    data=[]
+    for row in results:
+        data.append({
+            "CityId": row[0],
+            "Name" : row[1],
+            "CountryId" : row[2],
+            "Capital" : row[3],
+            "FirstLandmark": row[4],
+            "SecondLandmark" : row[5],
+            "ThirdLandMark" : row[6]
+        })  
+    return jsonify(data)

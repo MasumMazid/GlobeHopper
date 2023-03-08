@@ -56,6 +56,10 @@ def createcity():
 def getallCities():
     return cities.getCities()
 
+## Get capital
+@app.get('/countries/<int:country_id>')
+def getCapital(country_id):
+    return cities.getCapital(country_id)
 
 
 ## Delete City
