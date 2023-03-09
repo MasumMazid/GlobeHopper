@@ -57,7 +57,7 @@ def createcity():
 def getallCities():
     return cities.getCities()
 
-## Get capital
+## Get capital  "GH-4 <All cities>"
 @app.get('/countries/<int:country_id>')
 def getCapital(country_id):
     return cities.getCapital(country_id)
