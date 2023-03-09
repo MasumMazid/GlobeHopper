@@ -67,7 +67,7 @@ def getCapital(country_id):
 def deletecity(city_id):
     return cities.deletecity(city_id)
 
-##  Put Update City?
+##  Put Update City?"GH-8 <update city>"
 @app.put('/cities/<int:city_id>')
 def updatecity(city_id):
     data= request.json
