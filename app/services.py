@@ -83,8 +83,6 @@ def deletecitybyID(city_id):
     mycursor=conn.mydb.cursor()
     values=[city_id]
     mysql=("DELETE FROM City WHERE  CountryId = %s")
-    
-   
     mycursor.execute(mysql,(values)) 
     conn.mydb.close()
     
