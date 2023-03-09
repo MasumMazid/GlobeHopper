@@ -51,7 +51,7 @@ def createcity():
     data= request.json
     return cities.createCity(data)
 
-## Get all Cities
+## Get all Cities git commit -m "GH-4 All cities
 @app.get('/cities')
 def getallCities():
     return cities.getCities()
