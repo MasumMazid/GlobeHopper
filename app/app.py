@@ -33,13 +33,13 @@ def createcountry():
     data= request.json
     return countries.createcountry(data)
 
-## Delete Country
+## Delete Country gh7 delete city
 @app.delete('/countries/<int:country_id>')
 def deletecountry(country_id):
     return countries.deletecountry(country_id)
 
 
-## Put countries as in update country?
+## Put countries as in update country GH-10 <Update city>"
 @app.put('/countries/<int:country_id>')
 def updatecountry(country_id):
     data= request.json
