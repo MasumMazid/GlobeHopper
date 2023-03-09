@@ -11,7 +11,7 @@ app=Flask(__name__)
 
 ##Read API
 
-##"GH-3 <all countries>"
+##"GH-3 <all countries added>"
 @app.get('/countries')
 def getallcountries():
     return countries.getcountries()
