@@ -21,7 +21,7 @@ def getallcountries():
 def getLandMark(CityId):
     return cities.getLandMark(CityId)
 
-##Get Countries in Continent
+##Get Countries in Continent "GH-5 
 @app.get('/countries/<continent>')
 def ContriesinContinent(continent):
     return countries.getcountriesincontinent(continent)
@@ -45,7 +45,7 @@ def updatecountry(country_id):
     return countries.UpdateCountry(data,country_id)
 
 
-## Add new City for travel agent  "GH-12 <message>"
+## Add new City for travel agent  "GH-12 
 @app.post('/cities')
 def createcity():
     data= request.json
