@@ -62,7 +62,7 @@ def getCapital(country_id):
     return cities.getCapital(country_id)
 
 
-## Delete City
+## Delete City  "GH-9 <Delete City>"
 @app.delete('/cities/<int:city_id>')
 def deletecity(city_id):
     return cities.deletecity(city_id)
